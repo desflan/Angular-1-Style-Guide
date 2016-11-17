@@ -32,7 +32,8 @@ namespace AngularDemo
                      "~/Scripts/angular.min.js",
                      "~/Scripts/angular-ui-router.min.js",
                       "~/Scripts/ui-grid.min.js",
-                     "~/app/app.js",
+                     "~/app/app.module.js",
+                     "~/app/core/core.module.js",
                      "~/app/core/configs.js",
                      "~/app/home/homeController.js"));
         }

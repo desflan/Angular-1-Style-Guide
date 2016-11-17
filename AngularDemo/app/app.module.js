@@ -10,8 +10,7 @@
 
     angular.module('app',
     [
-        'ui.router',
-        'ui.grid'
+        'app.core'
     ]);
 
     angular
