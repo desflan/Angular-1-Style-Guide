@@ -1,10 +1,4 @@
-﻿//'use strict';
-
-//var app = angular.module('app', [
-//    'ui.router',
-//    'ui.grid'
-//]);
-
+﻿
 (function() {
     'use strict';
 
