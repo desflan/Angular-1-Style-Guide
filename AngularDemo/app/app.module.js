@@ -1,11 +1,4 @@
-﻿//'use strict';
-
-//var app = angular.module('app', [
-//    'ui.router',
-//    'ui.grid'
-//]);
-
-(function() {
+﻿(function() {
     'use strict';
 
     angular.module('app',
@@ -37,7 +30,7 @@
       .module('app')
       .run([
        '$state', function ($state) {
-           //include $route to kickstart the router
+           //include $state to kickstart it
        }
     ]);
 
