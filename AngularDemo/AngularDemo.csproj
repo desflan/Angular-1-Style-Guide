@@ -207,13 +207,20 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\add\add.html" />
+    <Content Include="app\add\addController.js" />
     <Content Include="app\app.module.js" />
     <Content Include="app\core\configs.js" />
     <Content Include="app\core\core.module.js" />
     <Content Include="app\home\home.html" />
     <Content Include="app\home\homeController.js" />
+    <Content Include="app\userprofile\userProfileController.js" />
+    <Content Include="app\view\view.html" />
+    <Content Include="app\view\viewController.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\add.png" />
+    <Content Include="Content\images\view.jpg" />
     <Content Include="Content\ui-grid.css" />
     <Content Include="Content\ui-grid.min.css" />
     <Content Include="Content\ui-grid.svg" />

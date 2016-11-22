@@ -1,4 +1,14 @@
 ﻿<div>
-    Home page.
-    This is the {{vm.name}} controller
+    <div class="text-center" ng-controller="userProfileController as vm"><h1>Hello {{vm.user.firstname}}!</h1></div>
+    <div class="text-center"><h3>What would you like to do today?</h3></div>
+
+    <div class="col-sm-12">
+        <div class="col-sm-6 text-center menuText">
+            <a ui-sref='view'><img src="Content/images/view.jpg" /></a><strong><p>View All Activities</p></strong>
+        </div>
+        <div class="col-sm-6 text-center menuText">
+            <a ui-sref='add'><img src="Content/images/add.png" /></a><strong><p>Add New Activity</p></strong>
+        </div>
+    </div>
+
 </div>

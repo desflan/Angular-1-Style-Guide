@@ -28,18 +28,18 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Activity Tracker</a>
+
+                    <a class="navbar-brand" ui-sref='home'>Activity Tracker</a>
                 </div>
-                @*<div id="navbar" class="navbar-collapse collapse">
+                <div id="navbar" class="navbar-collapse collapse" ng-controller="userProfileController as vm">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Branch</a></li>
-                        <li><a href="#">ATM</a></li>
-                        <li><a href="#">Staff</a></li>
+                        <li ui-sref-active="active"><a ui-sref='view'>View Activities<span class="sr-only">(current)</span></a></li>
+                        <li ui-sref-active="active"><a ui-sref='add'>Add Activity</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="loginName">Des Flanagan</li>
+                        <li class="loginName"><strong>Logged in as:</strong> {{vm.user.firstname}} {{vm.user.lastname}}</li>
                     </ul>
-                </div>*@
+                </div>
             </div>
         </nav>
 

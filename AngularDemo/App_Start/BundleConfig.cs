@@ -35,7 +35,10 @@ namespace AngularDemo
                      "~/app/app.module.js",
                      "~/app/core/core.module.js",
                      "~/app/core/configs.js",
-                     "~/app/home/homeController.js"));
+                     "~/app/home/homeController.js",
+                     "~/app/view/viewController.js",
+                     "~/app/add/addController.js",
+                     "~/app/userprofile/userProfileController.js"));
         }
     }
 }
