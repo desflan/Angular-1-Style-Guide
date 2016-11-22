@@ -27,6 +27,10 @@ textarea {
   margin-bottom: 20px;
 }
 
+.navbar-brand {
+    margin-right: 60px;
+}
+
 .loginName {
     margin-top: 15px;
     margin-right: 15px;
