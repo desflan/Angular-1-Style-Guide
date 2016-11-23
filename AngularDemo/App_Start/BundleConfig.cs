@@ -34,7 +34,7 @@ namespace AngularDemo
                       "~/Scripts/ui-grid.min.js",
                      "~/app/app.module.js",
                      "~/app/core/core.module.js",
-                     "~/app/core/configs.js",
+                     "~/app/core/config.js",
                      "~/app/home/homeController.js",
                      "~/app/view/viewController.js",
                      "~/app/add/addController.js",

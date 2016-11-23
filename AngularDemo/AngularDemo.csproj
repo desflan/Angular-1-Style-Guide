@@ -210,7 +210,7 @@
     <Content Include="app\add\add.html" />
     <Content Include="app\add\addController.js" />
     <Content Include="app\app.module.js" />
-    <Content Include="app\core\configs.js" />
+    <Content Include="app\core\config.js" />
     <Content Include="app\core\core.module.js" />
     <Content Include="app\home\home.html" />
     <Content Include="app\home\homeController.js" />
@@ -1061,7 +1061,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
