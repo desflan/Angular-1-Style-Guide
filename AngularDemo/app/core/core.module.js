@@ -7,6 +7,13 @@
          * 3rd Party modules
          */
         'ui.router',
-        'ui.grid'
+        'ui.grid',
+        'ngAnimate',
+
+       /*
+         * Reusable modules
+         */
+         'app.notification'
+
     ]);
 })();

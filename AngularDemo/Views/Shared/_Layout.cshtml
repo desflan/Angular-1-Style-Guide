@@ -11,8 +11,6 @@
     <title>Activity tracker</title>
 
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-    @Scripts.Render("~/bundles/angular")
 </head>
 
 <body>
@@ -48,7 +46,10 @@
     </div> <!-- /container -->
 
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+        @Scripts.Render("~/bundles/bootstrap")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/vendor")
+        @Scripts.Render("~/bundles/angular")
     @RenderSection("scripts", required: false)
 
 

@@ -5,9 +5,9 @@
         .module('app')
         .controller('homeController', homeController);
 
-    homeController.$inject = ['$location']; 
+     homeController.$inject = ['notification'];
 
-    function homeController($location) {
+     function homeController(notification) {
 
         /* jshint validthis:true */
         var vm = this;
@@ -17,6 +17,8 @@
 
         function activate() {
             vm.name = "home";
+
+            notification.success("message 2", "title 2");
         }
     }
 })();

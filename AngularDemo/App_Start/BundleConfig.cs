@@ -25,20 +25,29 @@ namespace AngularDemo
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/angular-toastr.min.css"));
 
 
-            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+            bundles.Add(new ScriptBundle("~/bundles/vendor").Include(
                      "~/Scripts/angular.min.js",
                      "~/Scripts/angular-ui-router.min.js",
                       "~/Scripts/ui-grid.min.js",
-                     "~/app/app.module.js",
-                     "~/app/core/core.module.js",
-                     "~/app/core/config.js",
-                     "~/app/home/homeController.js",
-                     "~/app/view/viewController.js",
-                     "~/app/add/addController.js",
-                     "~/app/userprofile/userProfileController.js"));
+                      "~/Scripts/angular-toastr.tpls.min.js",
+                      "~/Scripts/angular-animate.min.js"
+                    ));
+
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                    "~/app/app.module.js",
+                    "~/app/core/core.module.js",
+                    "~/app/core/config.js",
+                    "~/app/core/constants.js",
+                    "~/app/home/homeController.js",
+                    "~/app/view/viewController.js",
+                    "~/app/add/addController.js",
+                    "~/app/userprofile/userProfileController.js",
+                    "~/app/notification/notification.module.js",
+                    "~/app/notification/notification.service.js"));
         }
     }
 }

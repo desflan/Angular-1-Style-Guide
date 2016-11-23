@@ -2,9 +2,21 @@
 
     'use strict';
 
-    angular.module('app')
-        .constant('configs',
-        {
-            "AppName": "Angular Demo"
+    angular.module('app.core')
+    .config(function (toastrConfig) {
+        angular.extend(toastrConfig, {
+            autoDismiss: false,
+            containerId: 'toast-container',
+            maxOpened: 1,
+            newestOnTop: true,
+            positionClass: 'toast-bottom-right',
+            preventDuplicates: false,
+            preventOpenDuplicates: false,
+            target: 'body',
+            timeOut: 1000,
+            extendedTimeout: '0',
+            closeButton: true
         });
+    });
+
 })();
