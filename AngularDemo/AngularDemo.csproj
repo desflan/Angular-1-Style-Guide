@@ -209,6 +209,7 @@
   <ItemGroup>
     <Content Include="app\add\add.html" />
     <Content Include="app\add\add.module.js" />
+    <Content Include="app\add\add.route.js" />
     <Content Include="app\add\addController.js" />
     <Content Include="app\app.module.js" />
     <Content Include="app\core\config.js" />

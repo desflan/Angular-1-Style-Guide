@@ -34,13 +34,14 @@
                 controller: 'viewController',
                 controllerAs: 'vm'
             })
-            .state('add',
-            {
-                url: '/add',
-                templateUrl: '/app/add/add.html',
-                controller: 'addController',
-                controllerAs: 'vm'
-            });
+            //.state('add',
+            //{
+            //    url: '/add',
+            //    templateUrl: '/app/add/add.html',
+            //    controller: 'addController',
+            //    controllerAs: 'vm'
+            //})
+        ;
 
         $urlRouterProvider.otherwise('/');
     }
