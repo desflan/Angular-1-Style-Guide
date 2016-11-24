@@ -4,7 +4,13 @@
 
     angular.module('app',
     [
-        'app.core'
+        'app.core',
+
+        /*
+         * Features
+         */
+        'app.add',
+        'app.view'
     ]);
 
     angular

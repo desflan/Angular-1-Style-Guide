@@ -208,6 +208,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\add\add.html" />
+    <Content Include="app\add\add.module.js" />
     <Content Include="app\add\addController.js" />
     <Content Include="app\app.module.js" />
     <Content Include="app\core\config.js" />
@@ -219,6 +220,7 @@
     <Content Include="app\notification\notification.service.js" />
     <Content Include="app\userprofile\userProfileController.js" />
     <Content Include="app\view\view.html" />
+    <Content Include="app\view\view.module.js" />
     <Content Include="app\view\viewController.js" />
     <Content Include="Content\angular-toastr.css" />
     <Content Include="Content\angular-toastr.min.css" />

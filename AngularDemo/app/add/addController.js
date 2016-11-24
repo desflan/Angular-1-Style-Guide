@@ -2,10 +2,13 @@
     'use strict';
 
     angular
-        .module('app')
+        .module('app.add')
         .controller('addController', addController);
 
-    function addController() {
+
+    addController.$inject = ['notification'];
+
+    function addController(notification) {
 
         /* jshint validthis:true */
         var vm = this;
@@ -15,6 +18,7 @@
 
         function activate() {
             vm.name = "add";
+            notification.info('Page', 'this is the add page');
         }
     }
 })();

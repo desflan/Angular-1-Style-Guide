@@ -2,10 +2,12 @@
     'use strict';
 
     angular
-        .module('app')
+        .module('app.view')
         .controller('viewController', viewController);
 
-    function viewController() {
+    viewController.$inject = ['notification'];
+
+    function viewController(notification) {
 
         /* jshint validthis:true */
         var vm = this;
@@ -15,6 +17,7 @@
 
         function activate() {
             vm.name = "view";
+            notification.info('Page', 'this is the view page');
         }
     }
 })();

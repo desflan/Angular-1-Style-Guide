@@ -40,6 +40,8 @@ namespace AngularDemo
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                     "~/app/app.module.js",
                     "~/app/core/core.module.js",
+                    "~/app/add/add.module.js",
+                    "~/app/view/view.module.js",
                     "~/app/core/config.js",
                     "~/app/core/constants.js",
                     "~/app/home/homeController.js",
