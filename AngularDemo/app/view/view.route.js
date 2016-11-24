@@ -2,23 +2,23 @@
     'use strict';
 
     angular
-       .module('app.add')
+       .module('app.view')
        .config(['$stateProvider', configRoutes]);
 
     function configRoutes($stateProvider) {
 
         $stateProvider
-            .state('add',
+            .state('view',
             {
-                url: '/add',
-                templateUrl: '/app/add/add.html',
-                controller: 'addController',
+                url: '/view',
+                templateUrl: '/app/view/view.html',
+                controller: 'viewController',
                 controllerAs: 'vm'
             });
     }
 
     angular
-      .module('app.add')
+      .module('app.view')
       .run([
        '$state', function ($state) {
            //include $state to kickstart it
