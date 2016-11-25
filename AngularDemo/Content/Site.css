@@ -35,3 +35,17 @@ textarea {
     margin-top: 15px;
     margin-right: 15px;
 }
+
+.toast-top-right {
+    top: 100px !important;
+    right: 100px !important;
+}
+
+.myGrid {
+     width: 840px;
+    height: 250px;
+}
+
+.myGrid a{
+    cursor:pointer;
+}

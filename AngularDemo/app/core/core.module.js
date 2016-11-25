@@ -8,6 +8,7 @@
          */
         'ui.router',
         'ui.grid',
+        'ui.grid.resizeColumns',
         'ngAnimate',
 
        /*

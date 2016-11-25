@@ -25,6 +25,7 @@ namespace AngularDemo
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/ui-grid.min.css",
                       "~/Content/site.css",
                       "~/Content/angular-toastr.min.css"));
 
@@ -34,7 +35,8 @@ namespace AngularDemo
                      "~/Scripts/angular-ui-router.min.js",
                       "~/Scripts/ui-grid.min.js",
                       "~/Scripts/angular-toastr.tpls.min.js",
-                      "~/Scripts/angular-animate.min.js"
+                      "~/Scripts/angular-animate.min.js",
+                      "~/Scripts/angular-touch.min.js"
                     ));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
