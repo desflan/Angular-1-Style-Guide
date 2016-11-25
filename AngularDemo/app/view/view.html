@@ -1,2 +1,19 @@
-﻿
-<div ui-grid="vm.gridOptions" class="myGrid" ui-grid-resize-columns></div>
+﻿<div class="row col-sm-12">
+    <div class="row col-sm-6">
+        <div class="col-sm-5 text-right voffset1">
+            <strong>Filter</strong>
+        </div>
+        <div class="col-sm-1 text-left">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{vm.selectedItem}}   <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li ng-repeat="a in vm.activityTypes"><a ng-click="vm.activityTypeChanged(a.Name)">{{a.Name}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ui-grid="vm.gridOptions" class="myGrid voffset5" ui-grid-resize-columns></div>
