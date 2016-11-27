@@ -9,6 +9,8 @@
         'ui.router',
         'ui.grid',
         'ui.grid.resizeColumns',
+        'ui.grid.selection',
+        'ui.grid.exporter',
         'ngAnimate',
 
        /*

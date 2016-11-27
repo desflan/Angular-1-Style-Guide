@@ -45,6 +45,8 @@
                 multiSelect: false,
                 rowSelection: true,
                 showGridFooter: false,
+                exporterMenuPdf: false,
+                exporterCsvFilename: 'Activity-Export.csv',
                 columnDefs: [
                     {
                         field: 'name',
