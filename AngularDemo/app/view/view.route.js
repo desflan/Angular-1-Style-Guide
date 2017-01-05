@@ -11,7 +11,7 @@
             .state('view',
             {
                 url: '/view',
-                templateUrl: '/app/view/view.html',
+                templateUrl: 'AngularJsDemo/app/view/view.html',
                 controller: 'viewController',
                 controllerAs: 'vm'
             });

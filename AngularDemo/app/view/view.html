@@ -1,19 +1,24 @@
 ﻿<div class="row col-sm-12">
     <div class="row col-sm-6">
-        <div class="col-sm-5 text-right voffset1">
+        <div class="col-sm-6 text-right voffset1">
             <strong>Filter</strong>
         </div>
-        <div class="col-sm-1 text-left">
-            <div class="btn-group">
+        <div class="col-sm-6 text-right">
+            <!--<div class="btn-group">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    {{vm.selectedItem}}   <span class="caret"></span>
+                    {{vm.filter.type}} <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
                     <li ng-repeat="a in vm.activityTypes"><a ng-click="vm.activityTypeChanged(a.Name)">{{a.Name}}</a></li>
                 </ul>
-            </div>
+            </div>-->
+            <select class="form-control" ng-model="vm.filter.type">
+                <option value="" selected disabled>Type</option>
+                <option ng-repeat="b in vm.activityTypes">{{b.Name}}</option>
+            </select>
         </div>
     </div>
-</div>
+    <div class="row col-sm-6"></div>
+    </div>
 
 <div ui-grid="vm.gridOptions" class="myGrid voffset5" ui-grid-resize-columns ui-grid-exporter ui-grid-selection></div>

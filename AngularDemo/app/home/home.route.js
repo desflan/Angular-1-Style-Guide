@@ -11,7 +11,7 @@
             .state('home',
             {
                 url: '/',
-                templateUrl: '/app/home/home.html',
+                templateUrl: 'AngularJsDemo/app/home/home.html',
                 controller: 'homeController',
                 controllerAs: 'vm'
             });

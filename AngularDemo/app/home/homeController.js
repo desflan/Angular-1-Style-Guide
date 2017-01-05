@@ -17,8 +17,6 @@
 
         function activate() {
             vm.name = "home";
-
-            notification.success("message 2", "title 2");
         }
     }
 })();

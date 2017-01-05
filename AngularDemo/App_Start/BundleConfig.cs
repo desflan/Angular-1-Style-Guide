@@ -49,12 +49,14 @@ namespace AngularDemo
                     "~/app/view/view.route.js",
                     "~/app/core/config.js",
                     "~/app/core/constants.js",
+                     "~/app/view/view.service.js",
                     "~/app/home/homeController.js",
                     "~/app/view/viewController.js",
                     "~/app/add/addController.js",
                     "~/app/userprofile/userProfileController.js",
                     "~/app/notification/notification.module.js",
-                    "~/app/notification/notification.service.js"));
+                    "~/app/notification/notification.service.js"
+                   ));
         }
     }
 }

@@ -5,37 +5,63 @@
         .module('app.view')
         .controller('viewController', viewController);
 
-    viewController.$inject = ['notification'];
+    viewController.$inject = ['view','notification'];
 
-    function viewController(notification) {
+    function viewController(view, notification) {
 
         /* jshint validthis:true */
         var vm = this;
         vm.title;
         vm.activities;
+        vm.activityTypes;
         vm.success;
         vm.error;
         vm.gridOptions;
         vm.activityTypeChanged;
-        vm.selectedItem;
+        vm.filter;
 
         activate();
+      // loadActivities();   loadActivities();  //put this into activate???
 
         function activate() {
 
             vm.title = 'View Activities';
-            vm.activities = [
-                { name: "Royal National Park", type: "Cycle", start: "01/11/2016 6:10AM", duration: "3 hours 16 mins", distance: "112.5km", comments: "hill workout" },
-                { name: "Bondi to Coogee", type: "Run", start: "05/11/2016 7:13PM", duration: "42 mins", distance: "11.6km", comments: "focus on speed" }
-            ];
-            vm.activityTypes = [{ Id: 1, Name: "None" },{ Id: 2, Name: "Run" }, { Id: 3, Name: "Cycle" }, { Id: 4, Name: "Swim" }];
+           // vm.activityTypes = [{ Id: 1, Name: "None" }, { Id: 2, Name: "Run" }, { Id: 3, Name: "Cycle" }, { Id: 4, Name: "Swim" }];
+            loadActivities();
+            loadActivityTypes();
             vm.activityTypeChanged = activityTypeChanged;
-            vm.selectedItem = vm.activityTypes[0].Name;
             vm.success = false;
             vm.error = false;
             vm.gridOptions = setGridOptions();
+            vm.filter = {
+                type: '',
+                name: ''
+            }
         }
 
+        function loadActivities() {
+
+            view.getActivities()
+                .then(function (data) {
+                        vm.activities = data;
+                    },
+                    function (error) {
+                        notification.error(error.statusText);
+                    }
+                );
+        }
+
+        function loadActivityTypes() {
+
+            view.getActivityTypes()
+                .then(function(data) {
+                        vm.activityTypes = data;
+                    },
+                    function(error) {
+                        notification.error(error.statusText);
+                    });
+
+        }
 
         function setGridOptions() {
             return {
@@ -96,7 +122,7 @@
 
 
         function activityTypeChanged(type) {
-            vm.selectedItem = type;
+           vm.filter.type = type;
         }
     }
 

@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Royal National Park",
+    "type": "Cycle",
+    "start": "01/11/2016 6:10AM",
+    "duration": "3 hours 16 mins",
+    "distance": "112.5km",
+    "comments": "hill workout"
+  },
+  {
+    "name": "Bondi to Coogee",
+    "type": "Run",
+    "start": "05/11/2016 7:13PM",
+    "duration": "42 mins",
+    "distance": "11.6km",
+    "comments": "focus on speed"
+  }
+]
