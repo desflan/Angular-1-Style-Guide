@@ -5,7 +5,7 @@
     "start": "01/11/2016 6:10AM",
     "duration": "3 hours 16 mins",
     "distance": "112.5km",
-    "comments": "hill workout"
+    "comments": "hill workout, very hard, no head-wind, felt strong on final hill"
   },
   {
     "name": "Bondi to Coogee",
@@ -13,6 +13,70 @@
     "start": "05/11/2016 7:13PM",
     "duration": "42 mins",
     "distance": "11.6km",
-    "comments": "focus on speed"
+    "comments": "focused on speed, slower than expected, avg 3.55 km pace "
+  },
+  {
+    "name": "La Perouse Loop",
+    "type": "Cycle",
+    "start": "10/11/2016 8:10AM",
+    "duration": "1 hours 11 mins",
+    "distance": "45.5km",
+    "comments": "easy spin, no wind, flushed out the legs"
+  },
+  {
+    "name": "Bronte to Bondi 5K",
+    "type": "Run",
+    "start": "11/11/2016 4.12PM",
+    "duration": "19 mins 54 secs",
+    "distance": "5km",
+    "comments": "flat run, avg 3.50 pace, felt strong"
+  },
+  {
+    "name": "1000m freestyle",
+    "type": "Swim",
+    "start": "13/11/2016 7:40AM",
+    "duration": "55 mins",
+    "distance": "1000m",
+    "comments": "did easy pace as felt tired. First 500m was 30s quicker"
+  },
+  {
+    "name": "City to Centennial Park",
+    "type": "Run",
+    "start": "15/11/2016 4:18PM",
+    "duration": "32 mins",
+    "distance": "8.1km",
+    "comments": "speed workout, felt strong. "
+  },
+  {
+    "name": "Eastern Surburbs loop",
+    "type": "cycle",
+    "start": "17/11/2016 6:13AM",
+    "duration": "2 hrs 3 mins",
+    "distance": "60.2km",
+    "comments": "hilly workout, legs sore after it. No head-wind"
+  },
+  {
+    "name": "Park Run 5k",
+    "type": "Run",
+    "start": "19/11/2016 8:10AM",
+    "duration": "19 mins 34 secs",
+    "distance": "5.0km",
+    "comments": "fast course, went quicker than I expected"
+  },
+  {
+    "name": "Bondi 1km",
+    "type": "swim",
+    "start": "21/11/2016 6:13AM",
+    "duration": "1hr 15 mins",
+    "distance": "1.0km",
+    "comments": "stormy conditions with big surf so took longer than expected"
+  },
+  {
+    "name": "Sydney to Woolongong",
+    "type": "Swim",
+    "start": "25/11/2016 8:10AM",
+    "duration": "4 hrs 14 mins",
+    "distance": "180km",
+    "comments": "very windy, had a puncture after 50k"
   }
 ]

@@ -13,7 +13,7 @@
             preventDuplicates: false,
             preventOpenDuplicates: false,
             target: 'body',
-            timeOut: 1000,
+            timeOut: 5000,
             extendedTimeout: '0',
             closeButton: true
         });

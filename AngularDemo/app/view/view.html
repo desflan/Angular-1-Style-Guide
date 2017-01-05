@@ -4,14 +4,6 @@
             <strong>Filter</strong>
         </div>
         <div class="col-sm-6 text-right">
-            <!--<div class="btn-group">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    {{vm.filter.type}} <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li ng-repeat="a in vm.activityTypes"><a ng-click="vm.activityTypeChanged(a.Name)">{{a.Name}}</a></li>
-                </ul>
-            </div>-->
             <select class="form-control" ng-model="vm.filter.type">
                 <option value="" selected disabled>Type</option>
                 <option ng-repeat="b in vm.activityTypes">{{b.Name}}</option>
@@ -19,6 +11,92 @@
         </div>
     </div>
     <div class="row col-sm-6"></div>
-    </div>
+</div>
 
 <div ui-grid="vm.gridOptions" class="myGrid voffset5" ui-grid-resize-columns ui-grid-exporter ui-grid-selection></div>
+
+<div class="row voffset5 col-sm-9">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Activity Details</h3>
+        </div>
+        <div class="panel-body">
+            <form>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="col-sm-12">
+                            <div class="col-sm-2">
+                                <label>Name</label>
+                            </div>
+                            <div class="col-sm-10">
+                                <input type="text" ng-model="vm.selectedActivity.name" class="form-control input-sm" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="col-sm-12">
+                            <div class="col-sm-3">
+                                <label>Duration</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <input type="text" ng-model="vm.selectedActivity.duration" class="form-control input-sm" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row voffset2">
+                    <div class="col-sm-6">
+                        <div class="col-sm-12">
+                            <div class="col-sm-2">
+                                <label>Type</label>
+                            </div>
+                            <div class="col-sm-10">
+                                <input type="text" ng-model="vm.selectedActivity.type" class="form-control input-sm" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="col-sm-12">
+                            <div class="col-sm-3">
+                                <label>Distance</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <input type="text" ng-model="vm.selectedActivity.distance" class="form-control input-sm" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row voffset2">
+                    <div class="col-sm-6">
+                        <div class="col-sm-12">
+                            <div class="col-sm-2">
+                                <label>Start</label>
+                            </div>
+                            <div class="col-sm-10">
+                                <input type="text" ng-model="vm.selectedActivity.start" class="form-control input-sm" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="col-sm-12">
+                            <div class="col-sm-3">
+                                <label>Comments</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <textarea rows="3" ng-model="vm.selectedActivity.comments" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row voffset4">
+                    <div class="col-sm-12 text-center">
+                        <button class="btn btn-primary" ng-click="vm.updateActivity()">Update Activity</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+

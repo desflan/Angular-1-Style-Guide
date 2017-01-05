@@ -5,45 +5,50 @@
         .module('app.view')
         .controller('viewController', viewController);
 
-    viewController.$inject = ['view','notification'];
+    viewController.$inject = ['$timeout','view','notification'];
 
-    function viewController(view, notification) {
+    function viewController($timeout, view, notification) {
 
         /* jshint validthis:true */
         var vm = this;
         vm.title;
         vm.activities;
+        vm.selectedActivity;
         vm.activityTypes;
-        vm.success;
-        vm.error;
         vm.gridOptions;
         vm.activityTypeChanged;
         vm.filter;
 
+        vm.updateActivity;
+
         activate();
-      // loadActivities();   loadActivities();  //put this into activate???
 
         function activate() {
 
             vm.title = 'View Activities';
-           // vm.activityTypes = [{ Id: 1, Name: "None" }, { Id: 2, Name: "Run" }, { Id: 3, Name: "Cycle" }, { Id: 4, Name: "Swim" }];
             loadActivities();
             loadActivityTypes();
-            vm.activityTypeChanged = activityTypeChanged;
-            vm.success = false;
-            vm.error = false;
+            vm.activityTypeChanged = activityTypeChanged;   //is this needed???
             vm.gridOptions = setGridOptions();
             vm.filter = {
-                type: '',
-                name: ''
+                type: ''
             }
+
+            vm.updateActivity = updateActivity;
         }
 
         function loadActivities() {
 
             view.getActivities()
                 .then(function (data) {
-                        vm.activities = data;
+                    vm.gridOptions.data = data;
+
+                    //auto select first row in grid
+                        if (vm.gridApi.selection.selectRow) {
+                            $timeout(function () {
+                                vm.gridApi.selection.selectRow(vm.gridOptions.data[0]);
+                            });
+                        }
                     },
                     function (error) {
                         notification.error(error.statusText);
@@ -63,16 +68,28 @@
 
         }
 
+        function rowSelected(row) {
+            vm.selectedActivity = row.entity;
+        }
+
+        function updateActivity() {
+            notification.info("Demo app - changes not persisted", "Update Successful!");
+        }
+
         function setGridOptions() {
             return {
-                data: 'vm.activities',
                 enableGridMenu: true,
                 enableRowHeaderSelection: false,
                 multiSelect: false,
                 rowSelection: true,
                 showGridFooter: false,
                 exporterMenuPdf: false,
+                enableHorizontalScrollbar: 0,
                 exporterCsvFilename: 'Activity-Export.csv',
+                onRegisterApi: function (gridApi) {
+                    vm.gridApi = gridApi;
+                    gridApi.selection.on.rowSelectionChanged(null, rowSelected);  //triggers callback when grid row selected/unselected
+                },
                 columnDefs: [
                     {
                         field: 'name',
