@@ -5,9 +5,9 @@
         .module('app.view')
         .factory('view', view);
 
-    view.$inject = ['$http', '$q', 'configs'];
+    view.$inject = ['$http', '$q', 'constants'];
 
-    function view($http, $q, configs) {
+    function view($http, $q, constants) {
         var service = {
             getActivities: getActivities,
             getActivityTypes: getActivityTypes
@@ -19,7 +19,7 @@
             
             var deferred = $q.defer();
 
-            $http.get(configs.ActivitiesUrl)
+            $http.get(constants.ActivitiesUrl)
                 .then(function(response) {
                     deferred.resolve(response.data);
                     },
@@ -33,7 +33,7 @@
         function getActivityTypes() {
             var deferred = $q.defer();
 
-            $http.get(configs.ActivityTypesUrl)
+            $http.get(constants.ActivityTypesUrl)
                 .then(function(response) {
                         deferred.resolve(response.data);
                     },

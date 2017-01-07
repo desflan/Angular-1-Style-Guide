@@ -215,6 +215,8 @@
     <Content Include="app\core\config.js" />
     <Content Include="app\core\constants.js" />
     <Content Include="app\core\core.module.js" />
+    <Content Include="app\directives\gridLoading.directive.js" />
+    <Content Include="app\filters\activityTypeMap.filter.js" />
     <Content Include="app\home\home.html" />
     <Content Include="app\home\homeController.js" />
     <Content Include="app\home\home.route.js" />
@@ -230,12 +232,15 @@
     <Content Include="Content\angular-toastr.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\images\add.png" />
     <Content Include="Content\images\view.jpg" />
     <Content Include="Content\ui-grid.css" />
     <Content Include="Content\ui-grid.min.css" />
     <Content Include="Content\ui-grid.svg" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -294,6 +299,11 @@
     <Content Include="Content\ui-grid.eot" />
     <Content Include="App_Data\activities.json" />
     <Content Include="App_Data\activityTypes.json" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />

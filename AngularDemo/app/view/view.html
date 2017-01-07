@@ -1,19 +1,24 @@
 ﻿<div class="row col-sm-12">
-    <div class="row col-sm-6">
-        <div class="col-sm-6 text-right voffset1">
-            <strong>Filter</strong>
-        </div>
-        <div class="col-sm-6 text-right">
-            <select class="form-control" ng-model="vm.filter.type">
-                <option value="" selected disabled>Type</option>
-                <option ng-repeat="b in vm.activityTypes">{{b.Name}}</option>
-            </select>
-        </div>
+    <div class="col-sm-1 voffset1">
+        <strong>Filter</strong>
     </div>
-    <div class="row col-sm-6"></div>
+    <div class="col-sm-3">
+        <select class="form-control" ng-model="vm.filter.type" ng-change="vm.doFilter()">
+            <option value="" selected disabled>Activity Type</option>
+            <option ng-repeat="b in vm.activityTypes" value="{{b.Id}}">{{b.Name}}</option>
+        </select>
+    </div>
+    <div class="col-sm-8 voffset2 clear-filter">
+        <a href="" ng-click="vm.clearFilter()">Clear filter</a>
+    </div>
 </div>
 
-<div ui-grid="vm.gridOptions" class="myGrid voffset5" ui-grid-resize-columns ui-grid-exporter ui-grid-selection></div>
+<div ui-grid="vm.gridOptions" class="myGrid voffset5" ui-grid-resize-columns ui-grid-exporter ui-grid-selection>
+    <div class="well grid-loading" ng-show="vm.gridIsLoading">
+        <i class="fa fa-spin fa-spinner"></i>
+        <strong>Loading Activities...</strong>
+    </div>
+</div>
 
 <div class="row voffset5 col-sm-9">
     <div class="panel panel-default">

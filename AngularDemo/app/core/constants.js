@@ -3,7 +3,7 @@
     'use strict';
 
     angular.module('app')
-        .constant('configs',
+        .constant('constants',
         {
             "AppName": "Angular Demo",
             "ActivitiesUrl": "AngularJsDemo/app_data/activities.json",

@@ -16,10 +16,12 @@
         vm.selectedActivity;
         vm.activityTypes;
         vm.gridOptions;
-        vm.activityTypeChanged;
         vm.filter;
+        vm.gridIsLoading;
 
         vm.updateActivity;
+        vm.doFilter;
+        vm.clearFilter;
 
         activate();
 
@@ -28,13 +30,15 @@
             vm.title = 'View Activities';
             loadActivities();
             loadActivityTypes();
-            vm.activityTypeChanged = activityTypeChanged;   //is this needed???
             vm.gridOptions = setGridOptions();
             vm.filter = {
                 type: ''
-            }
+            };
+            vm.gridIsLoading = true;
 
             vm.updateActivity = updateActivity;
+            vm.doFilter = doFilter;
+            vm.clearFilter = clearFilter;
         }
 
         function loadActivities() {
@@ -42,6 +46,8 @@
             view.getActivities()
                 .then(function (data) {
                     vm.gridOptions.data = data;
+                    vm.activities = data;
+                    vm.gridIsLoading = false;
 
                     //auto select first row in grid
                         if (vm.gridApi.selection.selectRow) {
@@ -60,7 +66,7 @@
 
             view.getActivityTypes()
                 .then(function(data) {
-                        vm.activityTypes = data;
+                    vm.activityTypes = data;
                     },
                     function(error) {
                         notification.error(error.statusText);
@@ -74,6 +80,23 @@
 
         function updateActivity() {
             notification.info("Demo app - changes not persisted", "Update Successful!");
+        }
+
+        function doFilter()
+        {
+            var data = [];
+            angular.forEach(vm.activities,
+                function (item) {
+                    if (item.type === vm.filter.type) {
+                        data.push(item);
+                    }
+                });
+           
+            vm.gridOptions.data = data;
+        }
+
+        function clearFilter() {
+            vm.gridOptions.data = vm.activities;
         }
 
         function setGridOptions() {
@@ -103,6 +126,7 @@
                         displayName: 'Type',
                         enableSorting: true,
                         enableHiding: true,
+                        cellFilter: 'activityTypeMap',
                         width: '10%'
                     },
                     {
@@ -135,11 +159,6 @@
                     }
                 ]
             };
-        }
-
-
-        function activityTypeChanged(type) {
-           vm.filter.type = type;
         }
     }
 
