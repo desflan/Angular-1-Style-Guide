@@ -42,10 +42,8 @@ namespace AngularDemo
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                     "~/app/app.module.js",
                     "~/app/core/core.module.js",
-                    "~/app/add/add.module.js",
                     "~/app/view/view.module.js",
                     "~/app/home/home.route.js",
-                    "~/app/add/add.route.js",
                     "~/app/view/view.route.js",
                     "~/app/core/config.js",
                     "~/app/core/constants.js",
@@ -54,7 +52,6 @@ namespace AngularDemo
                      "~/app/directives/gridLoading.directive.js",
                     "~/app/home/homeController.js",
                     "~/app/view/viewController.js",
-                    "~/app/add/addController.js",
                     "~/app/userprofile/userProfileController.js",
                     "~/app/notification/notification.module.js",
                     "~/app/notification/notification.service.js"

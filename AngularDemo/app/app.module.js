@@ -9,7 +9,6 @@
         /*
          * Features
          */
-        'app.add',
         'app.view'
     ]);
 })();
