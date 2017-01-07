@@ -16,7 +16,6 @@
         };
 
         return service;
-        /////////////////////
 
         function error(message, title) {
             toastr.error(message, title);

@@ -18,12 +18,5 @@
 
         $urlRouterProvider.otherwise('/');
     }
-
-    angular
-       .module('app')
-       .run([
-        '$state', function ($state) {
-            //include $state to kickstart it
-        }
-       ]);
+  
 })();

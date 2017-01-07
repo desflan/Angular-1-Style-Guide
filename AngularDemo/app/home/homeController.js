@@ -5,9 +5,7 @@
         .module('app')
         .controller('homeController', homeController);
 
-     homeController.$inject = ['notification'];
-
-     function homeController(notification) {
+     function homeController() {
 
         /* jshint validthis:true */
         var vm = this;

@@ -17,11 +17,5 @@
             });
     }
 
-    angular
-      .module('app.view')
-      .run([
-       '$state', function ($state) {
-           //include $state to kickstart it
-       }
-      ]);
+   
 })();
