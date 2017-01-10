@@ -9,19 +9,18 @@
 
     function viewController($timeout, view, notification) {
 
-        /* jshint validthis:true */
         var vm = this;
         vm.title;
         vm.activities;
-        vm.selectedActivity;
         vm.activityTypes;
-        vm.gridOptions;
+        vm.clearFilter;
+        vm.doFilter;
         vm.filter;
         vm.gridIsLoading;
-
+        vm.gridOptions;
+        vm.selectedActivity;
         vm.updateActivity;
-        vm.doFilter;
-        vm.clearFilter;
+
 
         activate();
 
