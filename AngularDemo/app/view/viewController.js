@@ -56,7 +56,7 @@
                         }
                     },
                     function (error) {
-                        notification.error(error.statusText);
+                        notification.error("Error retrieving activities. Message: " + error.statusText);
                     }
                 );
         }
@@ -68,7 +68,7 @@
                     vm.activityTypes = data;
                     },
                     function(error) {
-                        notification.error(error.statusText);
+                        notification.error("Error retrieving activity types. Message: " + error.statusText);
                     });
 
         }

@@ -16,32 +16,23 @@
         return service;
 
         function getActivities() {
-            
-            var deferred = $q.defer();
 
-            $http.get(constants.ActivitiesUrl)
-                .then(function(response) {
-                    deferred.resolve(response.data);
-                    },
-                    function(error) {
-                        deferred.reject(error);
-                    });
+            return $http.get(constants.ActivitiesUrl)
+                .then(getActivitiesComplete);
+        }
+        
+        function getActivityTypes() {
 
-            return deferred.promise;
+            return $http.get(constants.ActivityTypesUrl)
+                .then(getActivityTypesComplete);
         }
 
-        function getActivityTypes() {
-            var deferred = $q.defer();
+        function getActivitiesComplete(response) {
+            return response.data;
+        }
 
-            $http.get(constants.ActivityTypesUrl)
-                .then(function(response) {
-                        deferred.resolve(response.data);
-                    },
-                    function(error) {
-                        deferred.reject(error);
-                    });
-
-            return deferred.promise;
+        function getActivityTypesComplete(response) {
+            return response.data;
         }
     }
 })();
