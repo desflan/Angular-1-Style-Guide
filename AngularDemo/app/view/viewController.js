@@ -43,22 +43,21 @@
         function loadActivities() {
 
             view.getActivities()
-                .then(function (data) {
+                .then(function(data) {
                     vm.gridOptions.data = data;
                     vm.activities = data;
                     vm.gridIsLoading = false;
 
                     //auto select first row in grid
-                        if (vm.gridApi.selection.selectRow) {
-                            $timeout(function () {
-                                vm.gridApi.selection.selectRow(vm.gridOptions.data[0]);
-                            });
-                        }
-                    },
-                    function (error) {
-                        notification.error("Error retrieving activities. Message: " + error.statusText);
+                    if (vm.gridApi.selection.selectRow) {
+                        $timeout(function() {
+                            vm.gridApi.selection.selectRow(vm.gridOptions.data[0]);
+                        });
                     }
-                );
+                })
+                .catch(function(error) {
+                    notification.error("Error retrieving activities. Message: " + error.statusText);
+                });
         }
 
         function loadActivityTypes() {
@@ -66,11 +65,10 @@
             view.getActivityTypes()
                 .then(function(data) {
                     vm.activityTypes = data;
-                    },
-                    function(error) {
-                        notification.error("Error retrieving activity types. Message: " + error.statusText);
-                    });
-
+                })
+                .catch(function(error) {
+                    notification.error("Error retrieving activity types. Message: " + error.statusText);
+                });
         }
 
         function rowSelected(row) {
