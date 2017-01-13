@@ -1,15 +1,17 @@
 ﻿(function () {
-
+    
     angular.module('app')
-    .directive('gridLoading', function () {
+    .directive('gridLoading', gridLoading);
+
+    function gridLoading() {
         return {
             restrict: 'C',
             require: '^uiGrid',
             link: function ($scope, $elm, $attrs, uiGridCtrl) {
-                $scope.grid = uiGridCtrl.grid;
+                $scope.grid = uiGridCtrl.grid1;
             }
         }
-    });
+    }
 
 
 })();
