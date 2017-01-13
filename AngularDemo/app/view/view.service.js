@@ -5,9 +5,9 @@
         .module('app.view')
         .factory('view', view);
 
-    view.$inject = ['$http', '$q', 'constants'];
+    view.$inject = ['$http', 'constants'];
 
-    function view($http, $q, constants) {
+    function view($http, constants) {
         var service = {
             getActivities: getActivities,
             getActivityTypes: getActivityTypes
