@@ -5,7 +5,7 @@
     'use strict';
 
     angular.module('app')
-        .filter('activityTypeMap',
+        .filter('activityType',
             function () {
                 var mapping = {
                     1: 'Run',

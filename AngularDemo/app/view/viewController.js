@@ -123,7 +123,7 @@
                         displayName: 'Type',
                         enableSorting: true,
                         enableHiding: true,
-                        cellFilter: 'activityTypeMap',
+                        cellFilter: 'activityType',
                         width: '10%'
                     },
                     {

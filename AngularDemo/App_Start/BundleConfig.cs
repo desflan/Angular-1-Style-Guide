@@ -48,7 +48,7 @@ namespace AngularDemo
                     "~/app/core/config.js",
                     "~/app/core/constants.js",
                      "~/app/view/view.service.js",
-                     "~/app/filters/activityTypeMap.filter.js",
+                     "~/app/filters/activityType.filter.js",
                      "~/app/directives/gridLoading.directive.js",
                     "~/app/home/homeController.js",
                     "~/app/view/viewController.js",

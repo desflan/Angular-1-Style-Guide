@@ -212,7 +212,7 @@
     <Content Include="app\core\constants.js" />
     <Content Include="app\core\core.module.js" />
     <Content Include="app\directives\gridLoading.directive.js" />
-    <Content Include="app\filters\activityTypeMap.filter.js" />
+    <Content Include="app\filters\activityType.filter.js" />
     <Content Include="app\home\home.html" />
     <Content Include="app\home\homeController.js" />
     <Content Include="app\home\home.route.js" />
