@@ -3,7 +3,9 @@
     'use strict';
 
     angular.module('app',
-    [
+    [/*
+         * Shared
+         */
         'app.core',
 
         /*
@@ -12,3 +14,11 @@
         'app.view'
     ]);
 })();
+
+
+
+
+
+
+
+
